@@ -41,7 +41,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="To Do List" id="Mi9-kD-XT1">
-                        <barButtonItem key="leftBarButtonItem" title="Edit" id="BgI-do-2pe"/>
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="BgI-do-2pe">
+                            <connections>
+                                <action selector="editBarButtonPressed:" destination="BYZ-38-t0r" id="U85-WE-uVF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aK0-q6-Dyb">
                             <connections>
                                 <segue destination="50M-Zl-hm1" kind="presentation" identifier="AddItem" id="Qjy-uW-mru"/>
@@ -49,6 +53,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addBarButton" destination="aK0-q6-Dyb" id="UKr-be-zcz"/>
+                        <outlet property="editBarButton" destination="BgI-do-2pe" id="zqg-Ni-fgd"/>
                         <outlet property="tableView" destination="5Wk-fY-NK3" id="4kI-wy-H0O"/>
                     </connections>
                 </viewController>
@@ -71,7 +77,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter  To Do Item Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CKD-rV-kNp">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Enter To Do Item Here" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CKD-rV-kNp">
                                 <rect key="frame" x="20" y="213" width="374" height="65"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
